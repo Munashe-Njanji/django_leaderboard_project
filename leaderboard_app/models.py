@@ -43,7 +43,7 @@ class LeaderboardEntry(models.Model):
     """Represents an entry in the leaderboard for a user."""
 
     leaderboard = models.ForeignKey(
-        Leaderboard, on_delete=models.CASCADE, related_name="entries"
+        Leaderboard, on_delete=models.CASCADE, related_name="leaderboard_entries"
     )
     user = models.ForeignKey(User, on_delete=models.CASCADE)
     total_score = models.IntegerField(default=0)
